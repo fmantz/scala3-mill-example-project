@@ -5,6 +5,16 @@
 This is a normal mill project. You can compile code with `mill examples.compile` and run it
 with `mill examples.run`, `mill -i examples.console` will start a Scala 3 REPL.
 
+In addition, you can also create a running jar file with the mill4scala plugin, that
+is reduced in its size. Either run `mill examples.assembly` or `mill examples.jar`.
+Since there are no test cases or dependencies the result will be basically the same.
+
+```bash
+./mill examples.assembly
+
+java -jar ./out/examples/assembly.dest/out.jar
+```
+
 ### IDE support
 
 It's recommended to either use [Metals](https://scalameta.org/metals/) with the
